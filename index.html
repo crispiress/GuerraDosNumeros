@@ -1,0 +1,46 @@
+GuerraDeNúmeros
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soma de Pares e Ímpares</title>
+</head>
+<body>
+
+<script>
+  function somaParesImpares(matriz) {
+    let somaPares = 0;
+    let somaImpares = 0;
+
+    for (let i = 0; i < matriz.length; i++) {
+      for (let j = 0; j < matriz[i].length; j++) {
+        const numero = matriz[i][j];
+
+        if (numero % 2 === 0) {
+          // Número par
+          somaPares += numero;
+        } else {
+          // Número ímpar
+          somaImpares += numero;
+        }
+      }
+    }
+
+    // Retorna a diferença entre a soma dos pares e ímpares
+    return somaPares - somaImpares;
+  }
+
+  // Exemplo de uso
+  const minhaMatriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+
+  const diferenca = somaParesImpares(minhaMatriz);
+  console.log("Diferença entre a soma de pares e ímpares:", diferenca);
+</script>
+
+</body>
+</html>
